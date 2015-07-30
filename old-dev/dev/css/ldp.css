@@ -1,0 +1,478 @@
+@font-face {
+    font-family: 'utm_akashiregular';
+    src: url('../fonts/utm_akashi-webfont.eot');
+    src: url('../fonts/utm_akashi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/utm_akashi-webfont.woff') format('woff'),
+         url('../fonts/utm_akashi-webfont.ttf') format('truetype'),
+         url('../fonts/utm_akashi-webfont.svg#utm_akashiregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@keyframes cloud {
+	from{
+		background-position: top left;
+	}
+	to{
+		background-position: top right;
+	}
+}
+@-webkit-keyframes cloud {
+	from{
+		background-position: top left;
+	}
+	to{
+		background-position: top right;
+	}
+}
+@-moz-keyframes cloud {
+	from{
+		background-position: top left;
+	}
+	to{
+		background-position: top right;
+	}
+}
+
+@keyframes zoom{
+	from{
+		transform: scale(0);
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+	}
+}
+@-webkit-keyframes zoom{
+	from{
+		transform: scale(0);
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+	}
+}
+@-moz-keyframes zoom{
+	from{
+		transform: scale(0);
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+	}
+}
+
+body{
+	background: #fff;
+	font-family: 'Roboto',arial,san-serif;
+	font-weight: 300;
+}
+
+.container{
+	min-width: 1020px;
+	position: relative;
+}
+
+.ldp .navbar-nav > li > a{
+padding:7px 15px;
+color:#189cee;
+font-weight: normal;
+text-shadow: inherit;
+}
+.ldp .navbar-nav > li > a.login{
+color:#fff;
+}
+
+.ldp .nav.navbar-right > li > a:hover,.ldp .nav.navbar-right > li > a:focus{
+background:none;
+color:#222;
+}
+.ldp .navbar{
+background:#fff;
+min-height:84px;
+line-height: 84px;
+position: fixed;
+top:0;left: 0;
+width: 100%;
+padding-top:11px;
+}
+
+.ldp .navbar-static-top .navbar-collapse{
+padding-right: 15px;
+}
+
+.ldp .navbar-brand{padding-top:4px;}
+.ldp .navbar-brand img{
+width: 53px;height:53px;
+}
+
+.ldp .navbar{
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+}
+
+
+
+.block{
+	height:522px;
+	position: relative;
+}
+.s_top{
+	background: url(../images/bg-top.jpg) no-repeat top center / auto 100%,#0382d3;
+	margin-top:84px;
+	height:600px;
+}
+
+.s_top .cloud{
+	display: block;
+	height: 153px;
+	width: 100%;
+	background: url(../images/cloud.png) repeat-x top left;
+	position: absolute;
+	bottom: 0;
+	 -webkit-animation: cloud 20s infinite forwards; /* Safari 4+ */
+  -moz-animation: cloud 20s infinite forwards; /* Fx 5+ */
+  -o-animation: cloud 20s infinite forwards; /* Opera 12+ */
+  animation: cloud 20s infinite forwards;
+}
+
+.s_top .onclan{
+	text-align: center;
+	color:#fff;
+	margin-top:80px;
+	animation : zoom .5s 2s 1 alternate backwards;
+	-webkit-animation: zoom .5s 2s 1 alternate backwards;
+	-moz-animation: zoom .5s 2s 1 alternate backwards;
+}
+.s_top .onclan img{
+margin-bottom: 32px;
+}
+
+.s_top .onclan .onclan_title{
+	font-family: 'utm_akashiregular',arial,san-serif;
+	font-size: 20px;
+	white-space: 1em;
+}
+.button{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-webkit-border-radius: 3px;
+	padding: 10px 20px;
+	font-size: 18px;
+	display: inline-block;
+	text-transform: uppercase;
+	margin-top:20px;
+	transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+font-weight: 300;
+}
+.s_top .onclan .btn-outline{
+	border: 2px solid #fff;
+}
+
+.s_top .onclan .btn-outline:hover{
+background: #fff;
+color:#189cee;
+transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+text-decoration: none;
+cursor: pointer;
+}
+
+.btn-fill{
+	background: #518bf7;
+	color:#fff;
+}
+
+.btn-fill:hover{
+background:#189cee;
+color: #fff;
+text-decoration: none;
+}
+
+
+.button i{
+font-size: 24px;
+margin-left: 15px;
+font-weight: normal;
+margin-top:2px;
+}
+
+.s_top .balloon{
+	position: absolute;
+	top:-84px;left:-80px;
+	z-index: 1;
+}
+
+.s_top .character{
+	position: absolute;
+	top:50px; right:-95px;
+	z-index: 1;
+}
+
+.in-game .onclan_title{
+	color:#189cee;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: normal;
+	position: absolute;
+top: 80px;
+left: 30px;
+}
+.in-game .onclan_title i{
+color:#b1c3cd;
+margin-right: 5px;
+}
+
+.block .feature_info{
+	padding:100px 0;
+}
+
+.block h3{
+font-size: 30px;
+color:#333;
+margin-bottom: 40px;
+}
+
+.block .onclan_feature_desc{
+	color:#858ea1;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;
+}
+
+.block.gray{
+	background:#fafbfd;
+	box-shadow: inset 0px -1px 3px rgba(0,0,0,0.05);
+}
+.block.dark{
+	background: url(../images/bg-support.jpg) no-repeat top center,#16192a;
+}
+.block.dark h3{color:#fff;}
+
+.in-game .owl-theme .owl-controls {
+position: absolute;
+top: 166px;
+left: 5px;
+}
+
+.owl-theme .owl-controls .owl-page span{
+	width:14px;height:14px;
+	opacity: 1;
+	background: #e1e1e1;
+}
+.owl-theme .owl-controls .owl-page.active span{
+	background: #189cee;
+}
+.in-game h3{
+	margin-bottom: 70px;
+}
+.block .img{
+	display: table-cell;
+	vertical-align: bottom;
+	height: 522px;
+	position: relative;
+	text-align: center;
+}
+
+.block .img .play{
+	font-size: 100px;
+	display: none;
+	position: absolute;
+	top:40%;
+	left: 45%;
+		transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+}
+
+.block .img:hover .play{
+display: block;
+	transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+}
+.block .img:hover img{
+	opacity: 0.3;
+	transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+}
+.block .img img{
+	transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+}
+#support img{
+	margin-bottom: -37px;
+z-index: 3;
+position: relative;
+}
+#platform{
+	height:auto;
+	padding: 55px 0;
+}
+
+#platform h2.title_block{
+	color:#333;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+	margin-top:0;
+}
+
+#platform img{
+	max-width: 64px;
+	margin-right: 10px;
+}
+
+#platform .plat_title{
+	font-size: 17px;
+	color:#858ea1;
+}
+
+footer{
+	padding: 40px 0px 20px 0px;
+}
+
+footer .footer_top h3{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+footer .footer_top ul{
+	padding:0;
+	margin-left:0;
+	list-style: none;
+}
+footer .footer_top ul li a{
+color:#c0c0c0;
+font-size: 13px;
+font-weight: normal;
+text-transform: uppercase;
+}
+
+footer .footer_top ul li a:hover{
+color:#189cee;
+text-decoration: none;
+}
+
+
+footer .footer_bottom{
+	text-align: center;
+	color:#c0c0c0;	margin-top:20px;
+}
+footer .footer_bottom span{
+	padding: 10px 60px;
+	border-top:1px solid #eeeeee;
+}
+
+@media (min-width: 1200px){
+	.s_top .balloon{
+		left:-10px;
+	}	
+	
+	.s_top .character{
+		right:-10px;
+	}
+}
+
+@media (max-width: 768px){
+.container{
+	min-width: inherit;
+}
+	.block{
+		height: auto;
+	}
+	.block .feature_info{
+		padding:30px 0;
+		text-align: center;
+	}
+	.block .img{
+		display: block;height: auto;
+		padding-top:30px;
+	}
+	.block .img img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.ldp .navbar{
+		min-height: inherit;
+		padding-top:0;
+	}
+	.navbar-header{
+		background: #fff;
+	}
+	.navbar-toggle .icon-bar{
+		background: #189cee;
+	}
+	.ldp .navbar-nav > li > a.login{
+		margin: 0 15px;
+	}
+	.ldp .navbar-toggle{
+		margin-top:14px;
+	}
+	.ldp .navbar-brand{
+		padding-bottom: 4px;
+	}
+	.s_top{
+		margin-top:60px;
+		min-height: 600px;
+		background: url(../images/bg-top-m.jpg) no-repeat bottom center /100% ,#0784d4;
+	}
+	.in-game .owl-theme .owl-controls {
+position: absolute;
+top: 93px;
+left: 45%;
+}
+.in-game .onclan_title{
+	top:15px;
+}
+
+.balloon,.character,.cloud{
+	display: none!important;
+}
+.block.dark{
+	background-position: bottom center;
+}
+}
+
+@media (max-width : 610px){
+	.s_top .onclan{
+		margin-top:50px;
+	}
+	.s_top .onclan img{
+		width: 120px;
+		margin-bottom: 20px;
+	}
+	.s_top{min-height:510px;}
+}
+
+@media (max-width : 384px){
+	.s_top .onclan img{
+		width:90px;
+	}
+	.button{
+		line-height: 40px;
+		padding:0px 15px;
+		font-size: 14px;
+	}
+	.button i{
+		margin-top: 8px;
+float: right;
+	}
+}

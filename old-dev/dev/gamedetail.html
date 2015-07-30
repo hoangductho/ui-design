@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>onClan Developers</title>
+
+    <link rel="shortcut icon" href="img/onClan.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/onClan-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/onClan-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/onClan-120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/onClan-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/onClan-60.png">
+    <link rel="apple-touch-icon-precomposed" href="img/onClan-57.png">
+
+    <!-- onClan Core CSS -->
+    <link href="css/onClan.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="css/plugins/social-buttons.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="css/plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/oc-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/menu.js"></script>
+	<script>
+		      
+		$(document).ready(function(){
+					
+					if($('.responsive_ui').is(':empty')){
+						search_box();
+					}
+					
+					$('.responsive_ui .navbar-search').click(function(){
+						if($('.navsearch').is(':hidden') == true){
+							$('.navsearch').show('300');
+						}else{
+							$('.navsearch').hide('300');	
+						}
+						return false;
+					});
+			
+		});	
+	</script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<!-- Navigation -->
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+            	 
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="responsive_ui pull-right"></div>
+                <a class="navbar-brand" href="index.html"><img src="img/onClan_logo.png"><span class="hidden-xs"></span></a>
+            </div>
+            <!-- /.navbar-header -->
+			
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+
+                      
+ <li class="m-dashboard">
+                            <a class="active" href="index.html"><i class="fa fa-home fa-fw"></i>Get Started</a>
+                        </li>
+
+                        <li class="m-dashboard">
+                            <a href="dashboard.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                        </li>
+                        <li class="m-games">
+                            <a href="games.html"><i class="fa fa-gamepad fa-fw"></i>Games</a>
+                        </li>
+                        <li class="m-sdk">
+                            <a href="sdk.html"><i class="fa fa-cubes fa-fw"></i>SDK</a>
+                        </li>
+                        <li class="m-reports">
+                            <a href="reports.html"><i class="fa fa-bar-chart-o fa-fw"></i>Reports</a>
+                        </li>
+                        <li class="m-support">
+                            <a href="support.html"><i class="fa fa-support fa-fw"></i>Support</a>
+                        </li>
+                        <li class="m-document">
+                            <a href="document.html"><i class="fa fa-clipboard fa-fw"></i>Document</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+			
+            <div class="navbar-bg"></div>
+            
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div class="navsearch">
+	        <input type="text" class="form-control" placeholder="Search...">
+        </div>
+<div id="page-wrapper">
+<div class="navbar-page">
+    <ul class="nav navbar-top-links navbar-right">
+        <li class="navbar-search">
+            <div class="input-group custom-search-form">
+                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-bell fa-fw"></i></i>
+            </a>
+            <ul class="dropdown-menu dropdown-messages">
+                <li>
+                    <a href="#">
+                        <div>
+                            <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a class="text-center" href="#">
+                        <strong>Read All Messages</strong>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.dropdown-messages -->
+        </li>
+
+
+        <!-- /.dropdown -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user fa-fw"></i></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                </li>
+                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="login.html"><i class="fa fa-power-off fa-fw"></i> Logout</a>
+                </li>
+            </ul>
+            <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+    </ul>
+</div>
+<div class="page-inner">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-header">
+            <div class="title-top navbar-left">
+                <h1><img src="images/apps-big-4.png" /> Candy Crush</h1>
+            </div>
+            
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<!-- /.row -->
+<div class="row">
+<div class="reports">
+	<div class="col-lg-3">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#gamedetail" data-toggle="tab">Game Detail<i class="fa fa-angle-right pull-right"></i></a></li>				<li><a href="#in-apps" data-toggle="tab">In-Apps Product<i class="fa fa-angle-right pull-right"></i></a></li>
+			<li><a href="#leaderboard" data-toggle="tab">Leaderboards<i class="fa fa-angle-right pull-right"></i></a></li>				<li><a href="#achievement" data-toggle="tab">Achievement<i class="fa fa-angle-right pull-right"></i></a></li>
+			<li><a href="#promotion" data-toggle="tab">Promotional Asset<i class="fa fa-angle-right pull-right"></i></a></li>			<li><a href="#manager" data-toggle="tab">Manager Application<i class="fa fa-angle-right pull-right"></i></a></li>
+			<li><a href="#submit" data-toggle="tab">Submit for Approval<i class="fa fa-angle-right pull-right"></i></a></li>
+			
+		</ul>
+	</div>
+	<div class="col-lg-9">
+			<div class="tab-content">
+				<div class="tab-pane active" id="gamedetail">
+					<div class="addgame">
+	
+    <div class="row">
+	<div class="col-lg-4">
+		<p><strong>How will you distribute your game?</strong></p>
+	</div>
+	<div class="col-lg-8">
+		<div class="form-group">
+			<label class="radio-inline">
+               <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked="">As an .APK (Android) 
+           </label>
+           
+           <label class="radio-inline">
+               <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked="">As an URL (Browse) 
+           </label>
+		</div>
+	</div>
+    </div>
+    <div class="row">
+	<div class="col-lg-4"><p><strong>Package Name *</strong></p></div>
+	<div class="col-lg-8"><div class="form-group"><input type="text" placeholder="Automatic set when you upload APK" class="form-control" disabled /></div></div>
+    </div>
+    
+    <div class="row">
+	    <div class="col-lg-4">
+		    <p><strong>Icon *</strong></p>
+		    <p><small>Upload an interesting and exciting image to showcase your game on onclan</small></p>
+	    </div>
+	    <div class="col-lg-8">
+	    	 <img data-src="holder.js/100%x120" alt="...">
+		    <label class="btn btn-social btn-dropbox" for="picture">
+                   <i class="fa fa-cloud-upload"></i> Upload Photo
+            </label>
+            <input type="file" id="picture" />
+	    </div>
+    </div>
+	
+	<div class="row">
+		<div class="col-lg-4"><p><strong>Name *</strong></p><p><small>Your game will be listed under this name in the game stores</small></p></div>
+		<div class="col-lg-8">
+			<input type="text" placeholder="Alphanumeric characters. Max 30 characters" class="form-control" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4"><p><strong>Description *</strong></p><p><small>Highlight fun facts about your game. This will be displayed on the game details page in the game store</small></p></div>
+		<div class="col-lg-8">
+			<textarea class="form-control" rows="3" placeholder="Alphanumeric characters. Max 4000 characters"></textarea>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-4"><p><strong>What is your pricing model ?</strong></p><p><small>Choose what users will pay for in this game</small></p></div>
+		<div class="col-lg-8">
+			<div class="radio">
+				<label>
+	               <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked="">Free to Play - Free game with in-app purchases 
+	           </label>
+			</div>
+           <div  class="radio">
+	           <label>
+	               <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked="">Premium - Paid game with or without in-app purchases
+	           </label>
+           </div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-4"><p><strong>Categories *</strong></p></div>
+		<div class="col-lg-8">
+			<div class="form-group">
+                <label>Primary *</label>
+                 <select class="form-control">
+                      <option>Action</option>
+                      <option>Adventure</option>
+                      <option>Board</option>
+                      <option>Brain tranning</option>
+                </select>
+             </div>
+             <div class="form-group">
+                <label>Secondary</label>
+                 <select class="form-control">
+                      <option>Action</option>
+                      <option>Adventure</option>
+                      <option>Board</option>
+                      <option>Brain tranning</option>
+                </select>
+             </div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4"><p><strong>Content Rating *</strong></p><p><small>ESRB rating is required to inform your users about the age appropriateness, content and interactive elements in the game</small></p></div>
+		<div class="col-lg-8">
+			<div class="form-group">
+                 <select class="form-control">
+                      <option>Rating Pending</option>
+                      <option>Early Childhood</option>
+                      <option>Everyone</option>
+                      <option>Everyone 10+</option>
+                </select>
+             </div>
+            
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-4"><p><strong>Privacy Policy *</strong></p><p><small>Your game will be listed under this name in the game stores</small></p></div>
+		<div class="col-lg-8">
+			<input type="text" placeholder="Provide an URL link to your privacy policies for your game" class="form-control" />
+		</div>
+	</div>
+	
+	</div>
+					
+				</div><!-- .gamedetail-->
+				<div class="tab-pane" id="in-apps">
+					<div class="tab-header clearfix">
+						<p class="pull-left"><strong>In-Apps Products</strong></p>
+						<div class="pull-right">
+							<div>
+				                <a class="btn btn-block btn-social btn-primary" href="add_in_apps.html">
+				                    <i class="fa fa-plus"></i> Add In-App Product 
+				                </a>
+				            </div>
+						</div>
+						
+						
+					</div><!-- .tab-header -->
+					<p class="text-muted" style="margin-top: 10px;">Set Up billing identifiers for in-app products (e.g. coins, currency, points, levels etc) in your game. Click here to learn how to implement in-app product purchase using the SDK</p>
+					
+					<div class="report-result">
+						<table class="table table-striped table-bordered table-hover dataTables-example">
+							<thead>
+							<tr>
+							    <th>Icon</th>
+							    <th>Product</th>
+							    <th>Type</th>
+							    <th>BillingID</th>
+							    <th>in-game ID</th>
+							    <th>Qty</th>
+							    <th>Price(VND)</th>
+							    <th>Status</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><img src="images/apps-big-4.png" /></td>
+									<td>Ai My Nhan</td>
+									<td>MMORPG</td>
+									<td>34</td>
+									<td>10</td>
+									<td>1</td>
+									<td>20.000</td>
+									<td>
+										<div class="btn-group">
+								            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+								                <i class="fa fa-circle fa-fw android"></i>Enable
+								                <span class="caret"></span>
+								            </button>
+								            <ul class="dropdown-menu pull-right" role="menu">
+								                <li><a href="#"><i class="fa fa-circle android fa-fw"></i>Enable</a>
+								                </li>
+								                <li><a href="#"><i class="fa fa-circle fa-fw"></i>Disabled</a>
+								                </li>
+								            </ul>
+								        </div>
+										
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div><!-- #in-app-->
+				<div class="tab-pane" id="leaderboard">
+					<div class="tab-header">
+						<p class="pull-left"><strong>Leaderboards</strong></p>
+						<div class="pull-right">
+							<div>
+				                <a class="btn btn-block btn-social btn-primary" href="add_leaderboard.html">
+				                    <i class="fa fa-plus"></i> Add Leaderboards
+				                </a>
+				            </div>
+						</div>
+					</div><!-- .tab-header -->
+					
+					<div class="report-result">
+						<table class="table table-striped table-bordered table-hover dataTables-example" id="">
+							<thead>
+								<tr>
+								    <th>Name</th>
+								    <th>Id</th>
+								    <th>Aggregation</th>
+								    <th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Ai My Nhan</td>	
+									<td>AM_3453</td>
+									<td>Best Score</td>
+									<td>
+										<div class="btn-group">
+								            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+								                <i class="fa fa-circle fa-fw android"></i>Enable
+								                <span class="caret"></span>
+								            </button>
+								            <ul class="dropdown-menu pull-right" role="menu">
+								                <li><a href="#"><i class="fa fa-circle android fa-fw"></i>Enable</a>
+								                </li>
+								                <li><a href="#"><i class="fa fa-circle fa-fw"></i>Disabled</a>
+								                </li>
+								            </ul>
+								        </div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div><!-- #leaderboard-->
+				<div class="tab-pane" id="achievement">
+					<div class="tab-header clearfix">
+						<p class="pull-left"><strong>Achievement</strong></p>
+						<div class="pull-right">
+							<div>
+				                <a class="btn btn-block btn-social btn-primary" href="add_achievement.html">
+				                    <i class="fa fa-plus"></i> Add Achievement
+				                </a>
+				            </div>
+						</div>
+					</div><!-- .tab-header -->
+					<p class="text-muted" style="margin-top:10px;">
+						You can use achievements to allow players to track their accomplishments (e.g. finishing certain levels, earning a badge etc.) in your game. Click here to learn how to implement Achievements using the SDK
+					</p>
+					
+					<div class="report-result">
+						<table class="table table-striped table-bordered table-hover dataTables-example" id="">
+							<thead>
+								<tr>
+								    <th>Icon</th>
+								    <th>Name</th>
+								    <th>ID</th>
+								    <th>Points</th>
+								    <th>Visibility</th>
+								    <th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><img src="images/apps-big-4.png" /></td>
+									<td>Ai My Nhan</td>	
+									<td>AM_3453</td>
+									<td>30</td>
+									<td>Score</td>
+									<td>
+										<div class="btn-group">
+								            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+								                <i class="fa fa-circle fa-fw android"></i>Enable
+								                <span class="caret"></span>
+								            </button>
+								            <ul class="dropdown-menu pull-right" role="menu">
+								                <li><a href="#"><i class="fa fa-circle android fa-fw"></i>Enable</a>
+								                </li>
+								                <li><a href="#"><i class="fa fa-circle fa-fw"></i>Disabled</a>
+								                </li>
+								            </ul>
+								        </div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div><!-- #manage-->
+				<div class="tab-pane" id="promotion">
+					<div class="tab-header clearfix">
+						<p class="pull-left"><strong>Promotions</strong></p>
+						<div class="pull-right">
+							<div>
+				                <a class="btn btn-block btn-social btn-primary" href="add_promotions.html">
+				                    <i class="fa fa-plus"></i> Add Promotions
+				                </a>
+				            </div>
+						</div>
+					</div><!-- .tab-header -->
+					<p class="text-muted" style="margin-top:10px;">
+						You can use achievements to allow players to track their accomplishments (e.g. finishing certain levels, earning a badge etc.) in your game. Click here to learn how to implement Achievements using the SDK
+					</p>
+					
+					<div class="report-result">
+						<table class="table table-striped table-bordered table-hover dataTables-example" id="">
+							<thead>
+								<tr>
+								    <th>Icon</th>
+								    <th>Name</th>
+								    <th>ID</th>
+								    <th>Points</th>
+								    <th>Visibility</th>
+								    <th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><img src="images/apps-big-4.png" /></td>
+									<td>Ai My Nhan</td>	
+									<td>AM_3453</td>
+									<td>30</td>
+									<td>Score</td>
+									<td>
+										<div class="btn-group">
+								            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+								                <i class="fa fa-circle fa-fw android"></i>Enable
+								                <span class="caret"></span>
+								            </button>
+								            <ul class="dropdown-menu pull-right" role="menu">
+								                <li><a href="#"><i class="fa fa-circle android fa-fw"></i>Enable</a>
+								                </li>
+								                <li><a href="#"><i class="fa fa-circle fa-fw"></i>Disabled</a>
+								                </li>
+								            </ul>
+								        </div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div><!-- #manage-->
+				<div class="tab-pane" id="manager">
+					<div class="tab-header">
+						<p class="pull-left"><strong>APK Management</strong></p>
+						<div class="pull-right">
+							<div>
+				                <a class="btn btn-block btn-social btn-primary" href="addnewapk.html">
+				                    <i class="fa fa-dropbox"></i> Add New APK 
+				                </a>
+				            </div>
+						</div>
+					</div><!-- .tab-header -->
+					
+					<div class="report-result">
+						<table class="table table-striped table-bordered table-hover dataTables-example">
+							<thead>
+							<tr>
+							    <th>Version(CODE)</th>
+							    <th>Name</th>
+							    <th>Added</th>
+							    <th>Size</th>
+							    <th>Platform</th>
+							    <th>Status</th>
+							    <th>Action</th>
+							</tr>
+							</thead>
+						</table>
+					</div>
+					
+				</div><!-- #manage-->
+				
+			</div>	
+	</div>
+</div>
+<!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+</div>
+</div>
+
+<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+
+<!-- DataTables JavaScript -->
+<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/oc-admin.js"></script>
+<script src="js/bootstrap.datepicker.js"></script>
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+    $(document).ready(function() {
+        $('.dataTables-example').dataTable();
+    });
+    
+    
+</script>
+
+</body>
+
+</html>

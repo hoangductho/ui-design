@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>onClan Developers</title>
+
+    <link rel="shortcut icon" href="img/onClan.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/onClan-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/onClan-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/onClan-120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/onClan-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/onClan-60.png">
+    <link rel="apple-touch-icon-precomposed" href="img/onClan-57.png">
+
+    <!-- onClan Core CSS -->
+    <link href="css/onClan.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="css/plugins/social-buttons.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="css/plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/oc-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+	<link href="css/plugins/timeline.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/menu.js"></script>
+	<script>
+		      
+		$(document).ready(function(){
+					
+					if($('.responsive_ui').is(':empty')){
+						search_box();
+					}
+					
+					$('.responsive_ui .navbar-search').click(function(){
+						if($('.navsearch').is(':hidden') == true){
+							$('.navsearch').show('300');
+						}else{
+							$('.navsearch').hide('300');	
+						}
+						return false;
+					});
+			
+		});	
+	</script>
+</head>
+
+<body>
+
+<div id="wrapper" class="ldp">
+
+<!-- Navigation -->
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+            	 
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="responsive_ui pull-right"></div>
+                <a class="navbar-brand" href="index.html"><img src="img/onClan_logo.png"><span class="hidden-xs"></span></a>
+            </div>
+            <!-- /.navbar-header -->
+			
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+
+                      
+ <li class="m-dashboard">
+                            <a class="active" href="index.html"><i class="fa fa-home fa-fw"></i>Get Started</a>
+                        </li>
+
+                        <li class="m-dashboard">
+                            <a href="dashboard.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                        </li>
+                        <li class="m-games">
+                            <a href="games.html"><i class="fa fa-gamepad fa-fw"></i>Games</a>
+                        </li>
+                        <li class="m-sdk">
+                            <a href="sdk.html"><i class="fa fa-cubes fa-fw"></i>SDK</a>
+                        </li>
+                        <li class="m-reports">
+                            <a href="reports.html"><i class="fa fa-bar-chart-o fa-fw"></i>Reports</a>
+                        </li>
+                        <li class="m-support">
+                            <a href="support.html"><i class="fa fa-support fa-fw"></i>Support</a>
+                        </li>
+                        <li class="m-document">
+                            <a href="document.html"><i class="fa fa-clipboard fa-fw"></i>Document</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+			
+            <div class="navbar-bg"></div>
+            
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div class="navsearch">
+	        <input type="text" class="form-control" placeholder="Search...">
+        </div>
+<div id="page-wrapper" class="clearfix">
+<div class="navbar-page">
+    <ul class="nav navbar-top-links navbar-right">
+        <li class="navbar-search">
+            <div class="input-group custom-search-form">
+                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-bell fa-fw"></i></i>
+            </a>
+            <ul class="dropdown-menu dropdown-messages">
+                <li>
+                    <a href="#">
+                        <div>
+                            <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a class="text-center" href="#">
+                        <strong>Read All Messages</strong>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.dropdown-messages -->
+        </li>
+
+
+        <!-- /.dropdown -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user fa-fw"></i></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                </li>
+                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="login.html"><i class="fa fa-power-off fa-fw"></i> Logout</a>
+                </li>
+            </ul>
+            <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+    </ul>
+</div>
+<div class="page-inner">
+	<div class="row">
+	    <div class="col-lg-9 col-md-8 line_space">
+	        <div class="page-header">
+            <div class="title-top pull-left">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="pull-right" style="margin-top:20px;">
+                <a class="btn btn-social btn-primary" href="addgame.html">
+                    <i class="fa fa-plus"></i>
+                    Add Game
+                </a>
+            </div>
+        </div>
+	        
+			
+		       
+		        	<div class="row">
+	        	<div class="pull-left">
+			        <div class="btn-group">
+			            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			                <i class="fa fa-bars fa-fw"></i> All
+			                <span class="caret"></span>
+			            </button>
+			            <ul class="dropdown-menu pull-right" role="menu">
+			                <li><a href="#"><img src="images/apps-big-5.png" class="icon-images" /> Ai My Nhan</a>
+			                </li>
+			                <li><a href="#"><img src="images/apps-big-4.png" class="icon-images"  /> Chien Tien</a>
+			                </li>
+			                <li><a href="#"><img src="images/apps-big-5.png" class="icon-images"  />Thien Ha</a>
+			                </li>
+			
+			            </ul>
+			        </div>
+			    </div>
+	        		
+	        	 <div class="pull-right">
+			        <div class="btn-group">
+			            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			                <i class="fa fa-bars fa-fw"></i> This month
+			                <span class="caret"></span>
+			            </button>
+			            <ul class="dropdown-menu pull-right" role="menu">
+			                <li><a href="#"> June</a>
+			                </li>
+			                <li><a href="#"> July</a>
+			                </li>
+			                <li><a href="#"> August</a>
+			                </li>
+			
+			            </ul>
+			        </div>
+			    </div>
+        	</div>
+		        	<div class="dashboard_chart">
+        		<div class="dashboard_stat clearfix">
+	        		
+		        		<div class="col-lg-3 col-md-6 col-sm-6">
+		        			<div class="block">
+			        		<span class="btn btn-circle btn-lg btn-success pull-left">
+			        			<i class="fa fa-users"></i>
+			        		</span>
+			        	
+			        		<p class="lead txt"><strong>120</strong><i class="fa fa-long-arrow-up green">5%</i></p> <span class="txt">Game Actived</span>
+		        			</div>
+		        		</div>
+		        		<div class="col-lg-3 col-md-6 col-sm-6">
+		        			<div class="block">
+			        		<span class="btn btn-circle btn-lg btn-primary pull-left">
+			        			<i class="fa fa-dollar"></i>
+			        		</span>
+			        		<p class="lead txt"><strong>120</strong><i class="fa fa-long-arrow-down red">2%</i></p> <span class="txt">Profit</span>
+		        			</div>
+		        		</div>
+		        		<div class="col-lg-3 col-md-6 col-sm-6">
+		        			<div class="block">
+			        		<span class="btn btn-circle btn-lg btn-warning pull-left">
+			        			<i class="fa fa-comments"></i>
+			        		</span>
+			        		<p class="lead txt"><strong>20</strong><i class="fa fa-long-arrow-up red">1%</i></p> <span class="txt">Comments</span>
+		        			</div>
+		        		</div>
+		        		<div class="col-lg-3 col-md-6 col-sm-6">
+		        			<div class="block">
+			        		<span class="btn btn-circle btn-lg btn-danger pull-left">
+			        			<i class="fa fa-bar-chart-o"></i>
+			        		</span>
+			        		<p class="lead txt"><strong>5%</strong><i class="fa fa-long-arrow-up red">1%</i></p> <span class="txt">Grown</span>
+		        			</div>
+		        		</div>
+	        		
+        		</div>	   	
+	        	<div class="panel panel-default">
+	                        <div class="panel-heading">
+	                            <ul class="nav nav-tabs">
+								  <li class="active"><a href="#avg_dau" data-toggle="tab">AVG DAU</a></li>
+								  <li><a href="#mau_mtd" data-toggle="tab">MAU MTD</a></li>
+								</ul>
+								
+	                        </div>
+	                        <div class="panel-body">
+	                           <div class="tab-content">
+									<div class="tab-pane active" id="avg_dau">
+										<div class="flot-chart">
+					                        <div class="flot-chart-content" id="flot-line-chart" style="width:100%;height:250px"></div>
+					                    </div>
+									</div>
+									<div class="tab-pane" id="mau_mtd">
+										<div class="flot-chart">
+					                        <div class="flot-chart-content" id="flot-line-chart" style="width:100%;height:250px"></div>
+					                    </div>
+									</div>
+								</div>
+	                        </div>
+	                      
+	                    </div>
+	        	</div> <!-- .cchart-->
+		        	<div class="dashboard_chart">	   	
+	        	<div class="panel panel-default">
+	                        <div class="panel-heading">
+	                            <ul class="nav nav-tabs">
+								  <li class="active"><a href="#rev_mtd" data-toggle="tab">REV MTD</a></li>
+								  <li><a href="#avg_rev_mtd" data-toggle="tab">AVG REV MTD</a></li>
+								  <li><a href="#arpu" data-toggle="tab">ARPU</a></li>
+								</ul>
+	                        </div>
+	                        <div class="panel-body">
+	                           <div class="tab-content">
+									<div class="tab-pane active" id="rev_mtd">
+										<div class="flot-chart">
+					                        <div class="flot-chart-content" id="flot-line-chart" style="width:100%;height:250px"></div>
+					                    </div>
+									</div>
+									<div class="tab-pane" id="avg_rev_mtd">
+										<div class="flot-chart">
+					                        <div class="flot-chart-content" id="flot-line-chart" style="width:100%;height:250px"></div>
+					                    </div>
+									</div>
+									<div class="tab-pane" id="arpu">
+										<div class="flot-chart">
+					                        <div class="flot-chart-content" id="flot-line-chart" style="width:100%;height:250px"></div>
+					                    </div>
+									</div>
+								</div>
+	                        </div>
+	                      
+	                    </div>
+	        	</div> <!-- .cchart-->
+		        
+			
+        	
+				
+        
+	        
+	    </div>
+	    <div class="col-lg-3 col-md-4 gray_left">
+	    	<div class="taks">
+	    		<!-- COMMENT TASK 
+		    		<div class="task_header">
+	                    <span class="icon-task"><i class="fa fa-bars fa-fw"></i><i class="fa fa-caret-right" style="color:#1D67F1;"></i></span> <a href="#" class="btn btn-default pull-right">New Task</a>
+		    		</div>
+               
+                	<h4>Upcoming Task</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <input type="checkbox" /> New Comment (by : <span class="mission">TuanPM</span>)
+                            
+                            <span href="#" class="pull-right trash"><i class="glyphicon glyphicon-trash"></i></span>
+                            
+                        </li>
+                         <li class="list-group-item">
+                            <input type="checkbox" /> New Comment (by : <span class="mission">TuanPM</span>)
+                            
+                        </li>
+                         <li class="list-group-item">
+                            <input type="checkbox" /> New Comment
+                           
+                        </li>
+                         <li class="list-group-item">
+                            <input type="checkbox" /> New Comment
+                            
+                        </li>
+                        <li class="list-group-item">
+                            <input type="checkbox" /> New Comment
+                            
+                        </li>
+                         <li class="list-group-item">
+                            <input type="checkbox" /> New Comment
+                            
+                        </li>
+                         <li class="list-group-item">
+                            <input type="checkbox" /> New Comment
+                            
+                        </li>
+                         <li class="list-group-item">
+                            <input type="checkbox" /> New Comment
+                            
+                        </li>
+                         <li class="list-group-item">
+                            <input type="checkbox" /> New Comment
+                            
+                        </li>
+                         <li class="list-group-item">
+                            <input type="checkbox" /> New Comment
+                            
+                        </li>
+                    </ul>
+               END TASK COMMENT -->
+                 <div class="task_header">
+	                    <span class="icon-task"><i class="fa fa-bars fa-fw"></i><i class="fa fa-caret-right" style="color:#1D67F1;"></i></span> <a href="#" class="btn btn-default pull-right">New Chat</a>
+		    		</div>   
+                 <div class="chat_box">  
+                  <h4><i class="fa fa-comments"></i><a href="#">Unread <span class="badge danger">42</span></a></h4>  
+                  <ul class="list-group">
+                  		<div class="list-chat">
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+	                           <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                           	<h5 class="list-group-item-heading">You</h5>	
+	                           Hi! Tôi là supporter
+                           </div>
+                        </li>
+                        <li class="list-group-item admin item">
+                           <div class="row-picture">
+	                           <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                           		<h5 class="list-group-item-heading">Admin</h5>
+	                           Hiện tại Microsoft từ chối cho biết phiên bản Windows dành cho doanh nghiệp có được nâng cấp miễn phí lên Windows 10
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+	                           <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                           		<h5 class="list-group-item-heading">You</h5>
+	                           Windows P10 sẽ được chính thức phát hành vào mùa thu năm 2015. 
+                           </div>
+                        </li>
+                        <li class="list-group-item admin item">
+                           <div class="row-picture">
+	                           <img class="circle" src="http://lorempixel.com/56/56/people/6" alt="icon">
+                           </div>
+                           <div class="row-content">
+                           		<h5 class="list-group-item-heading">Admin</h5>
+	                           Đối với hệ điều hành Windows Phone, Microsoft cũng sẽ “nhảy cóc” tên gọi như với Windows 10.
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+	                           <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                           		<h5 class="list-group-item-heading">You</h5>
+	                           Microsoft nhấn mạnh đến khả năng lý tưởng trên Windows 10. Theo đó, hệ điều hành này có thể nhận dạng thiết bị và thay đổi chế độ giao diện
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+	                           <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                           		<h5 class="list-group-item-heading">You</h5>
+	                           Hi! Tôi là supporter
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+	                           <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                           		<h5 class="list-group-item-heading">You</h5>
+	                           Hi! Tôi là supporter
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+	                           <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                           		<h5 class="list-group-item-heading">You</h5>
+	                           Hi! Tôi là supporter
+                           </div>
+                        </li>
+                        
+                  		</div>
+                         <li class="list-group-item post_chat">
+                           <div class="input-group">
+							   <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary btn-sm" id="btn-chat">
+                                        Send
+                                    </button>
+                                </span>
+                    </div>
+                           
+                         </li>  
+                  </ul>   
+                  </div><!-- .chat_box -->
+	    	</div>       
+                <!-- /.p -->
+         </div>
+			            <!-- /.task -->
+			
+	    </div>
+	    <!-- /.col-lg-12 -->
+	</div>
+
+<!-- /.row -->
+    
+        <!-- /.col-lg-12 -->
+        
+    </div>
+<!-- /.row -->
+</div>
+</div>
+
+<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+
+<!-- Flot Charts JavaScript -->
+<script src="js/plugins/flot/excanvas.min.js"></script>
+<script src="js/plugins/flot/jquery.flot.js"></script>
+<script src="js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="js/plugins/flot/flot-data.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/oc-admin.js"></script>
+
+
+</body>
+
+</html>

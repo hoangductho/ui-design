@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>onClan Developers</title>
+
+    <link rel="shortcut icon" href="img/onClan.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/onClan-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/onClan-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/onClan-120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/onClan-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/onClan-60.png">
+    <link rel="apple-touch-icon-precomposed" href="img/onClan-57.png">
+
+    <!-- onClan Core CSS -->
+    <link href="css/onClan.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="css/plugins/social-buttons.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="css/plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/oc-admin.css" rel="stylesheet">
+    <link href="css/trackpad-scroll-emulator.css" rel="stylesheet" />
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="css/plugins/timeline.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/menu.js"></script>
+    <script>
+              
+        $(document).ready(function(){
+                    
+                    if($('.responsive_ui').is(':empty')){
+                        search_box();
+                    }
+                    
+                    $('.responsive_ui .navbar-search').click(function(){
+                        if($('.navsearch').is(':hidden') == true){
+                            $('.navsearch').show('300');
+                        }else{
+                            $('.navsearch').hide('300');    
+                        }
+                        return false;
+                    });
+            
+        }); 
+    </script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<!-- Navigation -->
+ <nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                 
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="responsive_ui pull-right"></div>
+                <h2><span>Your Apps</span></h2>
+                
+                <div class="pull-right" style="margin-top:17px;margin-right:27px;">
+                <a class="btn btn-social btn-primary" href="addgame.html">
+                    <i class="fa fa-plus"></i>
+                    Add Game
+                </a>
+            </div>
+            </div>
+            <!-- /.navbar-header -->
+            
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse collapse">
+                    <div class="logo"><a class="navbar-brand" href="index.html"><img src="img/onClan_logo.png"><span class="hidden-xs">Developers</span></a></div>
+                    <ul class="nav" id="side-menu">
+
+                      
+ <li class="m-dashboard">
+                            <a class="active" href="index.html"><i class="fa fa-home fa-fw"></i>Get Started</a>
+                        </li>
+
+                        <li class="m-dashboard">
+                            <a href="dashboard.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                        </li>
+                        <li class="m-games">
+                            <a href="games.html"><i class="fa fa-gamepad fa-fw"></i>Games</a>
+                        </li>
+                        <li class="m-sdk">
+                            <a href="sdk.html"><i class="fa fa-cubes fa-fw"></i>SDK</a>
+                        </li>
+                        <li class="m-reports">
+                            <a href="reports.html"><i class="fa fa-bar-chart-o fa-fw"></i>Reports</a>
+                        </li>
+                        <li class="m-support">
+                            <a href="support.html"><i class="fa fa-support fa-fw"></i>Support</a>
+                        </li>
+                        <li class="m-document">
+                            <a href="document.html"><i class="fa fa-clipboard fa-fw"></i>Document</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            
+            <div class="navbar-bg"></div>
+            
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div class="navsearch">
+            <input type="text" class="form-control" placeholder="Search...">
+        </div>
+<div id="page-wrapper" class="clearfix">
+
+<div class="page-inner content">
+    <div class="row">
+        <div class="col-md-12">
+              <h3 ng-show="inactive.length > 0" class="headline">Inactive <span class="subtext ng-binding">1 <span>App</span><span></span></span></h3>
+
+              <div class="applist">
+                    <div class="item">
+                        <img class="app-icon custom img" src="https://lh5.ggpht.com/tW8GlRFDO5Gbbw4mhtATe-zyqWEYDM7XfpfnsQr5wqyRYRcaUYmpvDuRX-61E75HF2k=w300">
+                        <div class="info">
+                            <h4><a href="gamedetail.html">Tekken Card Tournament (CCQ)</a></h4>
+                            <p><i class="fa fa-android"></i> Android</p>
+                        </div>
+                        <div class="actions">
+                            <div class="stats">
+                                <i class="fa fa-sdk"></i> 
+                                <i class="fa fa-apple"></i>
+                                <i class="fa fa-play"></i>
+                            </div>
+                            <div class="sdk-placeholder"><a class="btn btn-grey">Activate SDK</a></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="app-icon custom img" src="images/apps-big-4.png">
+                        <div class="info">
+                            <h4><a href="gamedetail.html">Candy Crush</a></h4>
+                            <p><i class="fa fa-apple"></i> iOS</p>
+                        </div>
+                        <div class="actions">
+                            <div class="stats">
+                                <i class="fa fa-sdk"></i> 
+                                <i class="fa fa-apple"></i>
+                                <i class="fa fa-play"></i>
+                            </div>
+                            <div class="sdk-placeholder"><a class="btn btn-grey">Activate SDK</a></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="app-icon custom img" src="images/apps-big-5.png">
+                        <div class="info">
+                            <h4><a href="gamedetail.html">24h Quoc Chien</a></h4>
+                            <p><i class="fa fa-android"></i> Android</p>
+                        </div>
+                        <div class="actions">
+                            <div class="stats">
+                                <i class="fa fa-sdk"></i> 
+                                <i class="fa fa-apple"></i>
+                                <i class="fa fa-play"></i>
+                            </div>
+                            <div class="sdk-placeholder"><a class="btn btn-grey">Activate SDK</a></div>
+                        </div>
+                    </div>
+
+                    
+              </div>
+        </div>
+
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+
+
+<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<div class="gray_left launcher_chat_block hide">
+            <div class="taks">
+                 <div class="task_header">
+                        <span class="fa-close"></span>onClan<a href="#" class="btn btn-primary pull-right">New Chat</a>
+                    </div>   
+                 <div class="chat_box">  
+                  <!-- <h4><i class="fa fa-comments"></i><a href="#">Unread <span class="badge danger">42</span></a></h4>  --> 
+                  <ul class="list-group">
+                        <div class="tse-scrollable list-chat">
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+                               <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                            <h5 class="list-group-item-heading">You</h5>    
+                               Hi! Tôi là supporter
+                           </div>
+                        </li>
+                        <li class="list-group-item admin item">
+                           <div class="row-picture">
+                               <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                                <h5 class="list-group-item-heading">Admin</h5>
+                               Hiện tại Microsoft từ chối cho biết phiên bản Windows dành cho doanh nghiệp có được nâng cấp miễn phí lên Windows 10
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+                               <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                                <h5 class="list-group-item-heading">You</h5>
+                               Windows P10 sẽ được chính thức phát hành vào mùa thu năm 2015. 
+                           </div>
+                        </li>
+                        <li class="list-group-item admin item">
+                           <div class="row-picture">
+                               <img class="circle" src="http://lorempixel.com/56/56/people/6" alt="icon">
+                           </div>
+                           <div class="row-content">
+                                <h5 class="list-group-item-heading">Admin</h5>
+                               Đối với hệ điều hành Windows Phone, Microsoft cũng sẽ “nhảy cóc” tên gọi như với Windows 10.
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+                               <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                                <h5 class="list-group-item-heading">You</h5>
+                               Microsoft nhấn mạnh đến khả năng lý tưởng trên Windows 10. Theo đó, hệ điều hành này có thể nhận dạng thiết bị và thay đổi chế độ giao diện
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+                               <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                                <h5 class="list-group-item-heading">You</h5>
+                               Hi! Tôi là supporter
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+                               <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                                <h5 class="list-group-item-heading">You</h5>
+                               Hi! Tôi là supporter
+                           </div>
+                        </li>
+                        <li class="list-group-item item">
+                           <div class="row-picture">
+                               <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                           </div>
+                           <div class="row-content">
+                                <h5 class="list-group-item-heading">You</h5>
+                               Hi! Tôi là supporter
+                           </div>
+                        </li>
+                        
+                        </div>
+                         <li class="list-group-item post_chat">
+                           <div class="input-group">
+                               <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary btn-sm" id="btn-chat">
+                                        Send
+                                    </button>
+                                </span>
+                    </div>
+                           
+                         </li>  
+                  </ul>   
+                  </div><!-- .chat_box -->
+            </div>       
+                <!-- /.p -->
+         </div>
+                        <!-- /.task -->
+
+<div class="launcher-chat show">
+        <div class="launcher-button">
+        <i></i>
+        </div>
+</div>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+
+<!-- Flot Charts JavaScript -->
+<script src="js/plugins/flot/excanvas.min.js"></script>
+<script src="js/plugins/flot/jquery.flot.js"></script>
+<script src="js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/oc-admin.js"></script>
+<script src="js/jquery.trackpad-scroll-emulator.min.js"></script>
+
+</body>
+
+</html>
